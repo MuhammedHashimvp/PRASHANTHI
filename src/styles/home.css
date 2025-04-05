@@ -5,8 +5,25 @@
 .title{
     color: var( --primary-color);
     font-size: var(--font-size-title);
+    line-height: 3.5rem;
+    overflow-y: hidden;
+    font-weight:600;
 }
 .title span{
     color: var(--secondary-color);
-
+    
+}
+.appointment-btn{
+    background-color: var(--background-color);
+    height: 3rem;
+    /* width: 15rem; */
+    color: var(--primary-color);
+    border-radius: 10px;
+    border: 1px ridge rgba(128, 128, 128, 0.542);
+    color: var(--primary-color);
+}
+.appointment-btn:hover{
+    border: 0.5px ridge var(--primary-color);
+    background-color: var(--background-color);
+    transform: 1.5s;
 }

@@ -1,0 +1,12 @@
+.home-container{
+    background-color: var(--background-color);
+    min-height: 90vh;
+}
+.title{
+    color: var( --primary-color);
+    font-size: var(--font-size-title);
+}
+.title span{
+    color: var(--secondary-color);
+
+}

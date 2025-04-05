@@ -8,22 +8,41 @@
     line-height: 3.5rem;
     overflow-y: hidden;
     font-weight:600;
+    min-height: 17vh;
 }
 .title span{
     color: var(--secondary-color);
     
 }
 .appointment-btn{
-    background-color: var(--background-color);
-    height: 3rem;
+    background-color: var(--secondary-color);
+    height: 2.5rem;
     /* width: 15rem; */
-    color: var(--primary-color);
+    color: var(--primary-color) ;
     border-radius: 10px;
     border: 1px ridge rgba(128, 128, 128, 0.542);
-    color: var(--primary-color);
+    color: #fff;
+    overflow: hidden;
 }
 .appointment-btn:hover{
     border: 0.5px ridge var(--primary-color);
-    background-color: var(--background-color);
-    transform: 1.5s;
+    background-color: var(--primary-color);
+    transition: 0.3s;
+    color: #fff ;
+}  
+.right-div{
+    display: flex;
+    justify-content: center;
+
+    
+} 
+
+.hero-img{
+    width: 60%;
+    height: 55vh;
+    margin-top: -15px;
 }
+.fixed-typewriter {
+    display: inline-block;
+    min-height: 40px; /* Adjust this based on tallest line height */
+  }

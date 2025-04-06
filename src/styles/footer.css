@@ -15,7 +15,7 @@
   }
   
   a:hover {
-    color: #ffc107;
+    color:  var(--primary-color);
   }
   
   hr.solid {
@@ -41,7 +41,7 @@
   }
   
   .social-icon:hover {
-    color: #ffc107;
+    color: var(--primary-color);
   }
   .footer-links p {
     margin-bottom: 0.5rem;

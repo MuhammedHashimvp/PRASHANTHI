@@ -1,9 +1,9 @@
 import React from 'react';
 import '../styles/footer.css';
 import logo from "../assets/logo.png";
+
 import { Container, Row, Col } from 'react-bootstrap';
-import { FaMobileAlt, FaTwitter } from "react-icons/fa";
-import { FaFacebookF, FaInstagram, FaWhatsapp, FaYoutube } from "react-icons/fa";
+import { FaFacebookF, FaInstagram, FaWhatsapp,FaTwitter } from "react-icons/fa";
 
 const Footer = () => {
   return (
@@ -22,6 +22,7 @@ const Footer = () => {
           <Col xs={12} md={4} className="text-center text-md-start mb-4 mb-md-0">
             <h4>Prashanthi Ayurveda Hospital</h4>
             <h6 className="mb-1 pb-3">
+            
               Vilayil, Malappuram,<br />
               Kerala - 673641
             </h6>
@@ -32,7 +33,7 @@ const Footer = () => {
           </Col>
 
           {/* Links */}
-          {/* Links */}
+          
 <Col xs={12} md={4}>
   <div className="d-flex flex-wrap justify-content-center justify-content-md-start footer-links">
     <div className="d-flex w-100 justify-content-center justify-content-md-start gap-3 mb-2">

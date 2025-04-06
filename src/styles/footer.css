@@ -43,4 +43,7 @@
   .social-icon:hover {
     color: #ffc107;
   }
-    
+  .footer-links p {
+    margin-bottom: 0.5rem;
+  }
+  

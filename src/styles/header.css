@@ -1,8 +1,46 @@
 .navbar{
-    background-color: var(--secondary-color);
-    
+    background-color: var(--secondary-color); 
+    position:fixed;
+    margin-bottom: auto;
+     height: 85px; 
+    overflow:hidden; 
+     padding-left: 20px;
 
 }
-.nav-link{
-    color: white;
-}
+
+.cool-link {
+    position: relative;
+    color: hsl(0, 20%, 97%);
+    font-weight: 500;
+    transition: color 0.3s ease;
+  }
+  
+  .cool-link::after {
+    content: "";
+    position: absolute;
+    width: 0;
+    height: 2px;
+    left: 0;
+    bottom: 0;
+    background-color: #3e5e45;
+    transition: width 0.3s ease-in-out;
+  }
+  
+  .cool-link:hover::after {
+    width: 100%;
+  }
+  
+  .cool-link:hover {
+    color:var(--primary-color);
+  }
+  .header-btn{
+background-color:var(--background-color);
+color: white;
+
+  }
+   .logo{
+    width: 80px;
+    height: 80px;
+  } 
+  
+  

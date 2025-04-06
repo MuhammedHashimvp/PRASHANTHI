@@ -1,14 +1,16 @@
 import React from 'react'
 import '../styles/home.css'
 import { Typewriter } from 'react-simple-typewriter'
+import Underline from '../components/Underline'
+import Founder from '../components/Founder'
 
 const Home = () => {
   return (
-    <div className='container-fluid p-4 home-container'>
-      <div className="row">
+    <div className='container-fluid home-container'>
+      <div className="row hero-row ">
         {/* left */}
-        <div className="col-lg-6 col-sm-12 left-div">
-            <h1 className='title'>
+        <div className="col-lg-6 col-sm-12   left-div ">
+        <h1 className='title'>
             <span style={{ color: '#003152' }}>We Provide&nbsp;</span>
             <span style={{ color: 'green', fontWeight: 'bold' }}>
           <Typewriter 
@@ -37,10 +39,15 @@ const Home = () => {
         </div>
 
         {/* right */}
-        <div className="col-lg-6 col-sm-12 right-div">
-
+        <div className="col-lg-6 col-sm-12  right-div ">
+           <img className='hero-image' src="https://static.vecteezy.com/system/resources/previews/041/408/858/non_2x/ai-generated-a-smiling-doctor-with-glasses-and-a-white-lab-coat-isolated-on-transparent-background-free-png.png" alt="" />
         </div>
       </div>
+
+     {/* underline */}
+     <Underline/>
+     {/* founder */}
+     <Founder/>
     </div>
   )
 }

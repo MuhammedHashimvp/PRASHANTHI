@@ -1,0 +1,13 @@
+.hr-container {
+    display: flex;
+    justify-content: center;
+  }
+  
+  .hr {
+    width: 50%;
+    height: 3px;
+    background-color: green;
+    -webkit-mask-image: radial-gradient(ellipse at center, black 0%, transparent 100%);
+    mask-image: radial-gradient(ellipse at center, black 0%, transparent 100%);
+  }
+  

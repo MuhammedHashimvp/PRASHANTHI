@@ -1,7 +1,15 @@
 .home-container{
     background-color: var(--background-color);
     min-height: 90vh;
+    margin-top: 5rem;
 }
+.hero-row{
+    padding: 3rem;
+    
+    
+}
+
+
 .title{
     color: var( --primary-color);
     font-size: var(--font-size-title);
@@ -11,8 +19,7 @@
     min-height: 17vh;
 }
 .title span{
-    color: var(--secondary-color);
-    
+    color: var(--secondary-color);  
 }
 .appointment-btn{
     background-color: var(--secondary-color);
@@ -32,17 +39,34 @@
 }  
 .right-div{
     display: flex;
-    justify-content: center;
-
-    
+    justify-content: center; 
 } 
 
-.hero-img{
-    width: 60%;
-    height: 55vh;
-    margin-top: -15px;
+.hero-image{
+margin-top: -2rem;
 }
 .fixed-typewriter {
     display: inline-block;
-    min-height: 40px; /* Adjust this based on tallest line height */
+    min-height: 40px; 
+  }
+
+
+  /* media query */
+  @media only screen and (max-width: 600px) {
+    .hero-row{
+        padding: 0.2rem;
+        margin-top: 2rem;
+
+    }
+    .title{
+        font-size:2.6rem;
+        line-height: 2.5rem;
+        overflow-y: hidden;
+        font-weight:600;
+        min-height: 17vh;
+        width: 100%;
+    }
+    .hero-image{
+        margin-top: -1rem;
+    }
   }

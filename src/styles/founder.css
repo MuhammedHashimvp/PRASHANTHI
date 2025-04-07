@@ -6,6 +6,15 @@
 .founder-row h2{
     font-size: var(--font-size-sub-title);
 }
+.image-container{
+    display: flex;
+    justify-content: center;
+    background-image: url(../assets/founder-background.png);
+    background-position: center;
+    width: 20rem;
+    border-radius: 1rem;
+    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+}
 .founder-img{
-    width: 50%;
+    width: 100%;
 }

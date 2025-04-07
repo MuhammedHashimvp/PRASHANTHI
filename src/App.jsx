@@ -7,6 +7,8 @@ import Footer from './components/Footer'
 import Contact from './pages/Contact'
 import 'aos/dist/aos.css'
 import AOS from 'aos'
+import Book from './pages/Book'
+import { ToastContainer } from 'react-toastify';
 
 function App() {
   AOS.init()
@@ -17,9 +19,11 @@ function App() {
     <Routes>
       <Route path='/' element={<Home/>}/>
       <Route path='/contact' element={<Contact/>}/>
+      <Route path='/appointment' element={<Book/>}/>
     </Routes>
 
     <Footer/>
+    
     </>
   )
 }

@@ -31,7 +31,7 @@ const Navbar = () => {
         <div className="collapse navbar-collapse justify-content-end" id="navbarNav">
           <ul className="navbar-nav align-items-center gap-3">
           <li className="nav-item">
-              <a className="nav-link cool-link" href="#">
+              <a className="nav-link cool-link" href="/">
                 Home
               </a>
             </li>
@@ -59,7 +59,7 @@ const Navbar = () => {
               </a>
             </li> */}
             <li className="nav-item">
-              <a className="nav-link cool-link" href="#">
+              <a className="nav-link cool-link" href="/contact">
                 Contact
               </a>
             </li>

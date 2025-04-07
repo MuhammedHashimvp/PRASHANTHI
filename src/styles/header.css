@@ -2,8 +2,8 @@
     background-color: var(--secondary-color); 
     position:fixed;
     margin-bottom: auto;
-     height: 85px; 
-    overflow:hidden; 
+     min-height: 85px; 
+    /* overflow:hidden;  */
      padding-left: 20px;
 
 }
@@ -39,8 +39,9 @@ color: white;
 
   }
    .logo{
-    width: 80px;
-    height: 80px;
+    /* width: 80px;
+    height: 80px; */
+    padding: 0;
   } 
   
   

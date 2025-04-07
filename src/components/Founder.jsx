@@ -8,7 +8,7 @@ const Founder = () => {
     <div className='container-fluid'>
         <div className="row founder-row ">
             <h1 className='mb-5'>Our Founder</h1>
-            <div className="col-lg-6 col-sm-12 d-flex justify-content-center  p-5" data-aos="fade-right">
+            <div className="col-lg-6 col-sm-12 d-flex justify-content-center  p-5" data-aos="zoom-in">
               <div className="image-container">
                 <img className='founder-img' src={founderImg} alt="doctor image" />
               </div>

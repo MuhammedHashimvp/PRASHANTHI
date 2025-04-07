@@ -1,6 +1,6 @@
 import React from 'react';
 import '../styles/footer.css';
-import logo from "../assets/logo.png";
+import footerlogo from "../assets/logo-footer.png";
 import { Container, Row, Col } from 'react-bootstrap';
 import { FaFacebookF, FaInstagram, FaWhatsapp,FaTwitter } from "react-icons/fa";
 
@@ -13,7 +13,7 @@ const Footer = () => {
           {/* Logo */}
           <Col xs={12} md={4} className="text-center text-md-start mb-4 mb-md-0">
             <div className='logo-footer px-5'>
-              <img src={logo} alt="Prashanthi Ayurveda Hospital Logo" className="img-fluid" />
+              <img src={footerlogo} alt="Prashanthi Ayurveda Hospital Logo" className="img-fluid" />
             </div>
           </Col>
 

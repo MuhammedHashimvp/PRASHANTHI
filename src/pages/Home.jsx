@@ -3,6 +3,7 @@ import '../styles/home.css'
 import { Typewriter } from 'react-simple-typewriter'
 import Underline from '../components/Underline'
 import Founder from '../components/Founder'
+import Services from '../components/Services'
 
 const Home = () => {
   return (
@@ -48,6 +49,8 @@ const Home = () => {
      <Underline/>
      {/* founder */}
      <Founder/>
+     <Services/>
+
     </div>
   )
 }

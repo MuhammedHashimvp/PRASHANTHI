@@ -1,8 +1,7 @@
 import React from "react";
-import "bootstrap/dist/css/bootstrap.min.css";
-import "bootstrap/dist/js/bootstrap.bundle.min.js";
 import "../styles/header.css";
 import logo from "../assets/logo.png"; 
+
 const Navbar = () => {
   return (
     <nav className="navbar navbar-expand-lg navbar-light  shadow-sm sticky-top  px-4 w-100 ">

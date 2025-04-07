@@ -1,8 +1,7 @@
 import React from "react";
-import "bootstrap/dist/css/bootstrap.min.css";
-import "bootstrap/dist/js/bootstrap.bundle.min.js";
 import "../styles/header.css";
 import logo from "../assets/logo.png"; 
+
 const Navbar = () => {
   return (
     <nav className="navbar navbar-expand-lg navbar-light  shadow-sm sticky-top  px-4 w-100 ">
@@ -32,7 +31,7 @@ const Navbar = () => {
         <div className="collapse navbar-collapse justify-content-end" id="navbarNav">
           <ul className="navbar-nav align-items-center gap-3">
           <li className="nav-item">
-              <a className="nav-link cool-link" href="#">
+              <a className="nav-link cool-link" href="/">
                 Home
               </a>
             </li>
@@ -60,7 +59,7 @@ const Navbar = () => {
               </a>
             </li> */}
             <li className="nav-item">
-              <a className="nav-link cool-link" href="#">
+              <a className="nav-link cool-link" href="/contact">
                 Contact
               </a>
             </li>

@@ -1,7 +1,6 @@
 import React from 'react';
 import '../styles/footer.css';
 import logo from "../assets/logo.png";
-
 import { Container, Row, Col } from 'react-bootstrap';
 import { FaFacebookF, FaInstagram, FaWhatsapp,FaTwitter } from "react-icons/fa";
 

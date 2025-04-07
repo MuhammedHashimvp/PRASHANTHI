@@ -5,10 +5,11 @@ import Home from './pages/Home'
 import Header from './components/Header'
 import Footer from './components/Footer'
 import Contact from './pages/Contact'
-
+import 'aos/dist/aos.css'
+import AOS from 'aos'
 
 function App() {
-
+  AOS.init()
   return (
     <>
     <Header/>

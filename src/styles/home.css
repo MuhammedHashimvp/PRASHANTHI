@@ -8,7 +8,9 @@
     margin: 1rem; 
     overflow: hidden;
 }
-
+.remove-overflow{
+    overflow-y: hidden !important;
+}
 .title{
     color: var( --primary-color);
     font-size: var(--font-size-title);

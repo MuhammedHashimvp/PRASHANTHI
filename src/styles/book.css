@@ -1,10 +1,14 @@
 .book-container{
-    margin-top: 5rem;
+    /* margin-top: 5rem; */
     min-height: 90vh;
-    background-color: var(--background-color);
+
 }
+
 .book-row{
     margin-top: 2rem;
+}
+.bookpage-form{
+    border: 0.5px ridge var(--primary-color);   /* background-color: rgba(128, 128, 128, 0.082) !important; */
 }
 .box{
     display: flex;
@@ -14,7 +18,7 @@
 .book-title{
     text-align: center;
     font-size: var(--font-size-title);
-    color: var(--secondary-color);
+    /* color: var(--secondary-color); */
 }
 .input-div{
     display: flex;
@@ -52,4 +56,14 @@ input:focus::placeholder {
 .book-btn:hover{
     border: 1px ridge var(--primary-color);
 
+}
+
+.book-bg{
+    height: 40vh;
+    background-color: var(--background-color);
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
 }

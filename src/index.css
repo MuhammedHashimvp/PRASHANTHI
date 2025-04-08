@@ -1,7 +1,7 @@
 :root {
-  --primary-color: #003152;
+  /* --primary-color: #003152;
   --secondary-color: #58755b;
-  --background-color: #aebeb479;
+  --background-color: #aebeb479; */
   --font-size-title: 3.5rem;
   --font-size-sub-title: 2rem;
   --font-size-paragraph: 10px;
@@ -10,6 +10,8 @@
 * {
     margin: 0;
     padding: 0;
-    font-family:'Times New Roman', Times, serif;
+    /* font-family:'Times New Roman', Times, serif; */
     overflow-x: hidden;
+    font-family: "Poppins", sans-serif;
+
 }

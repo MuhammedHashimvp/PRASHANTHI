@@ -1,7 +1,12 @@
+.founder-row{
+    border-radius: 10px;
+}
 .founder-row h1{
     text-align: center;
     color: var(--secondary-color);
     font-size: var(--font-size-title);
+    font-weight: bold;
+    margin-top: 2rem;
 }
 .founder-row h2{
     font-size: var(--font-size-sub-title);
@@ -11,9 +16,9 @@
     justify-content: center;
     background-image: url(../assets/founder-background.png);
     background-position: center;
-    width: 20rem;
+    width: 30rem;
     border-radius: 1rem;
-    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+    /* box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px; */
 }
 .founder-img{
     width: 100%;

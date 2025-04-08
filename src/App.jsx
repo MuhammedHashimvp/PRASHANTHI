@@ -11,10 +11,10 @@ import Book from './pages/Book'
 import { ToastContainer } from 'react-toastify';
 
 function App() {
-  AOS.init()
+  // AOS.init()
   return (
     <>
-    <Header/>
+
     
     <Routes>
       <Route path='/' element={<Home/>}/>

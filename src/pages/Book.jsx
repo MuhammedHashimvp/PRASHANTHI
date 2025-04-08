@@ -1,8 +1,10 @@
 import React, { useState } from 'react'
 import '../styles/book.css'
-import Undreline from '../components/Underline'
 import axios from 'axios'
 import { Bounce, toast,ToastContainer } from 'react-toastify'
+import logo from "../assets/logo.png"; 
+import { Link } from 'react-router-dom';
+
 
 const Book = () => {
 
@@ -10,16 +12,19 @@ const Book = () => {
     name:'',
     email:'',
     phone:'',
-    speciality:'',
+    // speciality:'',
     appointmentDate:''
   })
-  console.log(formData)
 
   // submit
-  const handleBook =async()=>{
+  const handleBook =async(e)=>{
+    console.log('inside function')
+    e.preventDefault();
     try {
       let response =await axios.post('https://formsubmit.co/ajax/refadk007@gmail.com',formData,{  'Content-Type': 'application/json',
         'Accept': 'application/json'})
+
+        console.log(response)
       if(response.status == 200){
         toast.success('Booked successfully')
       }
@@ -29,33 +34,58 @@ const Book = () => {
   }
 
   return (
+    <>
+        {/* navbar */}
+        <header>
+        <nav className="section__container nav__container">
+          <div className="nav__logo"><img src={logo} alt="" /></div>
+          <ul className="nav__links">
+            <Link to={'/'}><li className="link"><a href="#home">Home</a></li></Link>
+            <li className="link"><a href="#service-section">Services</a></li>
+           <Link to={'/appointment'}><li className="link"><a href="#pages">Book Appointment</a></li></Link>
+          </ul>
+          <Link to={'/contact'}>
+          <button className="btn">Contact Us</button>
+          </Link>
+        </nav>
+
+
+      </header>
+    {/* navbar end */}
+
     <div className='container-fluid book-container'>
-      <div className="row book-row" data-aos="zoom-up">
-        <div className="col-lg-3 col-sm-12"></div>
+    
+    <div className="book-bg">
+        <h3 className='remove-overflow'>Schedule your appointment</h3>
+        <div className="line">
+          <div></div>
+          <div></div>
+          <div></div>
+        </div>
+        <p className="text">
+          Lorem ipsum dolor sit amet consectetur adipisicing elit. Qui neque nostrum incidunt, obcaecati nam facilis eos ipsam eligendi facere voluptas enim, quos atque voluptatem magni? Laborum, dicta ratione? Earum, ea!
+        </p>
+        </div>
+
+      <div className="row book-row" >
+        <div className="col-lg-6 col-sm-12"></div>
         <div className="col-lg-6 col-sm-12">
-          <div className="box shadow p-4 ">
-            <h2 className='book-title'>Book An Appointment</h2>
-            <Undreline/>
-            <div className="input-div">
-              <input onChange={(e)=>setFormData({...formData,name:e.target.value})}  className='form-control mt-2 inp' placeholder='name' type="text" name="name" id="" />
-              <input onChange={(e)=>setFormData({...formData,email:e.target.value})} className='form-control mt-2 inp' placeholder='email' type="email" name="email" id="" />
-              <input onChange={(e)=>setFormData({...formData,phone:e.target.value})} className='form-control mt-2 inp' placeholder='phone' type="text" name="phone" id="" />
-              {/* select speciality */}
-              <select onChange={(e)=>setFormData({...formData,speciality:e.target.value})} className='form-control mt-2 inp' name="speciality" id="">
-                <option value="">select speciality</option>
-                <option value="1">1</option>
-                <option value="2">2</option>
-                <option value="3">3</option>
-              </select>
-              {/* appointment date */}
-              <input onChange={(e)=>setFormData({...formData,appointmentDate:e.target.value})} className='form-control mt-2 inp'name='date' type="date" />
-            </div>
-            <div className="button-div">
-              <button onClick={handleBook} className='btn w-25  book-btn'>Book</button>
-            </div>
+        <div className="header__form bookpage-form">
+            <form className='bookpage-form'>
+              <h4 className="form-headding">Book Now</h4>
+              <input onChange={(e)=>setFormData({...formData,name:e.target.value})} type="text" placeholder="Name"  name='Name'/>
+              <input onChange={(e)=>setFormData({...formData,email:e.target.value})} type="text" placeholder="Email"  name='Email'/>
+              <input onChange={(e)=>setFormData({...formData,phone:e.target.value})} type="text" placeholder="Phone No" name='Phone' />
+              {/* <select name="" id="">
+                <option value="">Select</option>
+                <option value=""></option>
+                <option value=""></option>
+              </select> */}
+              <input onChange={(e)=>setFormData({...formData,appointmentDate:e.target.value})} type="date"  name='Date'/>
+              <button className="btn form__btn"  onClick={handleBook}>Book Appointment</button>
+            </form>
           </div>
         </div>
-        <div className="col-lg-3 col-sm-12"></div>
       </div>
       <ToastContainer
         position="bottom-right"
@@ -71,6 +101,7 @@ const Book = () => {
         transition={Bounce}
         />
     </div>
+    </>
   )
 }
 

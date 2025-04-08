@@ -1,17 +1,34 @@
 import React from 'react'
+import logo from "../assets/logo.png"; 
 import '../styles/contact.css';
-
 import { FaMobileAlt} from "react-icons/fa";
 import { MdEmail ,MdAccessTimeFilled} from "react-icons/md";
 import { FaLocationDot, } from "react-icons/fa6";
+import { Link } from 'react-router-dom';
 
 const Contact = () => {
   return (
     <>
-    {/* <div>Contact</div> */}
+    {/* navbar */}
+    <header>
+    <nav className="section__container nav__container">
+          <div className="nav__logo"><img src={logo} alt="" /></div>
+          <ul className="nav__links">
+            <Link to={'/'}><li className="link"><a href="#home">Home</a></li></Link>
+            <li className="link"><a href="#service-section">Services</a></li>
+           <Link to={'/appointment'}><li className="link"><a href="#pages">Book Appointment</a></li></Link>
+          </ul>
+          <Link to={'/contact'}>
+          {/* <button className="btn">Contact Us</button> */}
+          </Link>
+        </nav>
+
+
+      </header>
+    {/* navbar end */}
     <section className="contact-section">
       <div className="contact-bg">
-        <h3>Contact Us</h3>
+        <h3 className='remove-overflow'>Contact Us</h3>
         <div className="line">
           <div></div>
           <div></div>

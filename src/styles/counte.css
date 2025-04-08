@@ -1,0 +1,65 @@
+/* Main Container */
+.countup-container {
+  padding: 50px 20px;
+  text-align: center;
+  overflow-x: hidden; /* Avoid horizontal scroll */
+}
+
+/* Grid */
+.countup-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 30px;
+  max-width: 1000px;
+  margin: 0 auto;
+}
+
+/* Card */
+.count-card {
+  background: white;
+  padding: 30px;
+  border-radius: 16px;
+  transition: transform 0.3s ease;
+  animation: pop-in 0.6s ease;
+  overflow: hidden; /* Avoid inner content overflow */
+}
+
+/* Remove hover effect */
+.count-card:hover {
+  transform: none;
+}
+
+/* Icon */
+.count-icon {
+  font-size: 2.5rem;
+  margin-bottom: 10px;
+}
+
+/* Count Number */
+.count-value {
+  font-size: 2.8rem;
+  color: #00060a;
+  margin: 0;
+  white-space: nowrap; /* Prevent number wrap */
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+/* Title Text */
+.count-title {
+  font-size: 1.1rem;
+  color: #666;
+  margin-top: 10px;
+}
+
+/* Animation */
+@keyframes pop-in {
+  from {
+    opacity: 0;
+    transform: scale(0.95);
+  }
+  to {
+    opacity: 1;
+    transform: scale(1);
+  }
+}

@@ -53,7 +53,7 @@ const TrendingServicePage = () => {
     <div className="service-page mt-5" id='service-section'>
       {/* Hero Section */}
       <div className="hero-section text-center text-white d-flex flex-column justify-content-center align-items-center" >
-        <h1 className=" display-4 fw-bold">Specialized Services</h1>
+        <h1 className=" display-4 fw-bold remove-overflow">Specialized Services</h1>
         <p className="lead">Ayurveda is the science of life, the art of living in harmony with nature.</p>
       </div>
 
@@ -69,10 +69,9 @@ const TrendingServicePage = () => {
           key={idx}
           className={isLastOdd ? 'mx-auto' : ''}
         >
-          <Card className="glass-card text-center p-3 h-100 " data-aos="zoom-in">
+          <Card className="glass-card text-center p-3 h-100 " >
             <div className="icon fs-1 mb-3">{service.icon}</div>
-            <Card.Title className="">{service.title}</Card.Title>
-            <Card.Text>{service.description}</Card.Text>
+            <Card.Title className="service-text">{service.title}</Card.Title>
           </Card>
         </Col>
       );

@@ -12,7 +12,9 @@ const Contact = () => {
     {/* navbar */}
     <header>
     <nav className="section__container nav__container">
-          <div className="nav__logo"><img src={logo} alt="" /></div>
+                 <Link to={'/'}>
+                     <div className="nav__logo"><img src={logo} alt="" /></div>
+                     </Link>
           <ul className="nav__links">
             <Link to={'/'}><li className="link"><a href="#home">Home</a></li></Link>
             <li className="link"><a href="#service-section">Services</a></li>

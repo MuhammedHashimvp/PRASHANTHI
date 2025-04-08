@@ -34,7 +34,9 @@ const Navbar = () => {
 
     <header>
         <nav className="section__container nav__container">
-          <div className="nav__logo"><img src={logo} alt="" /></div>
+          <Link to={'/'}>
+              <div className="nav__logo"><img src={logo} alt="" /></div>
+              </Link>
           <ul className="nav__links">
             <Link to={'/'}><li className="link"><a href="#home">Home</a></li></Link>
             <li className="link"><a href="#service-section">Services</a></li>
@@ -66,7 +68,7 @@ const Navbar = () => {
                 <option value=""></option>
                 <option value=""></option>
               </select> */}
-              <input onChange={(e)=>setFormData({...formData,appointmentDate:e.target.value})} type="date" />
+              <input  onChange={(e)=>setFormData({...formData,appointmentDate:e.target.value})} type="date" />
               <button className="btn form__btn"  onClick={handleBook}>Book Appointment</button>
             </form>
           </div>

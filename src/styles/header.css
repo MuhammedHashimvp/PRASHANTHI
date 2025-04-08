@@ -130,7 +130,7 @@ header {
 
 .header__form {
   width: 100%;
-  max-width: 350px;
+  max-width: 400px;
 }
 
 .header__form form {
@@ -150,6 +150,7 @@ header {
   color: var(--primary-color);
   background-color: var(--primary-color-light);
   border-radius: 5px;
+  width: 100%;
 }
 .form-headding{
   overflow-y: hidden;

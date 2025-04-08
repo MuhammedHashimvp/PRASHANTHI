@@ -39,7 +39,7 @@ const Home = () => {
             Connect with trusted doctors online for expert advice. Get quick, reliable <br />
             consultations from certified professionals—anytime, anywhere.
           </p>
-          <button className='appointment-btn btn shadow w-50'>Appointment Now</button>
+          <button className='appointment-btn btn shadow '>Appointment Now</button>
         </div>
 
         {/* right */}

@@ -3,7 +3,7 @@
 
 :root {
   --primary-color: #12ac8e;
-  --primary-color-dark: #0d846c;
+  --primary-color-dark: #278c62;
   --primary-color-light: #e9f7f7;
   --secondary-color: #003152;
   --text-dark: #333333;
@@ -16,7 +16,7 @@
 .section__container {
   max-width: var(--max-width);
   margin: auto;
-  padding: 5rem 1rem;
+  padding: 5rem 1rem 0 1rem;
 }
 
 .section__header {
@@ -57,19 +57,20 @@ body {
 }
 
 header {
-  background-image: linear-gradient(
+  /* background-image: linear-gradient(
       to right,
       rgba(142, 180, 164, 0.9),
       rgba(18, 172, 123, 0.701)
     ),
-    url("../assets/pra.jpg");
+    url("../assets/pra.jpg"); */
+    
   background-position: center center;
   background-size: cover;
   background-repeat: no-repeat;
 }
 
 .nav__container {
-  padding: 2rem 1rem;
+  padding: 0 1rem;
   display: flex;
   align-items: center;
   justify-content: space-between;
@@ -93,16 +94,16 @@ header {
   gap: 2rem;
 }
 .link{
-  overflow-y: hidden !important;
+  overflow-y: hidden ;
 }
 .link a {
-
   padding: 0.5rem;
-  color: var(--primary-color-light);
+  color: var(--secondary-color);
+  font-weight: bold;
 }
 
 .link a:hover {
-  color: var(--white);
+  color: var(--primary-color-dark);
 }
 
 .header__container {
@@ -112,6 +113,7 @@ header {
 }
 .headding{
   overflow-y: hidden !important;
+  color: var(--primary-color-dark) !important;
 }
 
 .header__container h1 {
@@ -119,19 +121,16 @@ header {
   max-width: 800px;
   font-size: 3.5rem;
   line-height: 4rem;
-  color: var(--white);
+  /* color: var(--white); */
+  color: #278c62;
 }
 
 .header__container p {
   margin-bottom: 2rem;
   max-width: 600px;
-  color: var(--primary-color-light);
+  color: var(--primary-color-dark);
 }
 
-.header__form {
-  width: 100%;
-  max-width: 400px;
-}
 
 .header__form form {
   display: grid;
@@ -152,8 +151,15 @@ header {
   border-radius: 5px;
   width: 100%;
 }
-.form-headding{
-  overflow-y: hidden;
+.header__form select {
+  padding: 1rem;
+  outline: none;
+  border: none;
+  font-size: 1rem;
+  color: var(--primary-color);
+  background-color: var(--primary-color-light);
+  border-radius: 5px;
+  width: 100%;
 }
 .header__form input::placeholder {
   color: var(--primary-color);
@@ -172,6 +178,7 @@ header {
   font-size: 1.5rem;
   font-weight: 700;
   color: var(--primary-color);
+  overflow: hidden;
 }
 
 
@@ -180,9 +187,21 @@ header {
   .nav__links {
     display: none;
   }
+  .nav__links2 {
+    display: flex;
+  }
 
   .header__container {
     flex-direction: column;
+  }
+}
+
+@media (width > 780px) {
+  .nav__links {
+    display: flex;
+  }
+  .nav__links2 {
+    display: none;
   }
 }
 
@@ -191,3 +210,29 @@ header {
     flex-direction: column;
     text-align: center;
   }}
+
+.nav-sidebar li{
+  list-style: none;
+  display: flex;
+  gap: 2rem;
+  padding-left: 20px;
+}
+.sidebar-btn{
+  border: none;
+  color: var(--secondary-color);
+  font-size: xx-large !important;
+  background-color: transparent;
+}
+
+
+.dropdown{
+  overflow-y: visible;
+  overflow-y: visible;
+}
+.dropdown-menu{
+  z-index: 1000000 !important;
+  position: absolute !important;
+}
+.show{
+  
+}

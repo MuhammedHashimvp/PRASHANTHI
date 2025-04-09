@@ -1,92 +1,120 @@
 import React, { useState } from "react";
 import "../styles/header.css";
-import logo from "../assets/logo.png"; 
+import logo from "../assets/logo-footer.png";
 import { Link } from "react-router-dom";
-import { Bounce, toast,ToastContainer } from 'react-toastify'
+import { Bounce, toast, ToastContainer } from "react-toastify";
 import axios from "axios";
+import { FaBars } from "react-icons/fa";
+import { GrClose } from "react-icons/gr";
+import Button from 'react-bootstrap/Button';
+import Offcanvas from 'react-bootstrap/Offcanvas';
+import Dropdown from 'react-bootstrap/Dropdown';
+import DropdownButton from 'react-bootstrap/DropdownButton';
 
+import NavDropdown from 'react-bootstrap/NavDropdown';
 const Navbar = () => {
-  
-  const [formData,setFormData]=useState({
-    name:'',
-    email:'',
-    phone:'',
-    // speciality:'',
-    appointmentDate:''
-  })
 
+
+  const [show, setShow] = useState(false);
+
+  const handleClose = () => setShow(false);
+  const handleShow = () => setShow(true);
   // submit
-  const handleBook =async(e)=>{
-    e.preventDefault();
-    try {
-      let response =await axios.post('https://formsubmit.co/ajax/refadk007@gmail.com',formData,{  'Content-Type': 'application/json',
-        'Accept': 'application/json'})
-        console.log(response)
-      if(response.status == 200){
-        toast.success('Booked successfully')
-      }
-    } catch (error) {
-      console.log(error)
-    }
-  }
-  
+
+
   return (
-
     <header>
-        <nav className="section__container nav__container">
-          <Link to={'/'}>
-              <div className="nav__logo"><img src={logo} alt="" /></div>
-              </Link>
-          <ul className="nav__links">
-            <Link to={'/'}><li className="link"><a href="#home">Home</a></li></Link>
-            <li className="link"><a href="#service-section">Services</a></li>
-           <Link to={'/appointment'}><li className="link"><a href="#pages">Book Appointment</a></li></Link>
-          </ul>
-          <Link to={'/contact'}>
-          <button className="btn">Contact Us</button>
-          </Link>
-        </nav>
+      <nav className="section__container nav__container">
+        <Link to={"/"}>
+          <div className="nav__logo">
+            <img src={logo} alt="" />
+          </div>
+        </Link>
 
-        <div className="section__container header__container" id="home">
-          <div className="header__content">
-            <h1 className="headding">Providing an Exceptional Patient Experience</h1>
-            <p>
-              Welcome, where exceptional patient experiences are our priority. With compassionate care,
-              state-of-the-art facilities, and a patient-centered approach, we're dedicated to your well-being.
-              Trust us with your health and experience the difference.
-            </p>
-            {/* <button className="btn">See Services</button> */}
-          </div>
-          <div className="header__form">
-            <form>
-            <h4 className="form-headding">Book Now</h4>
-              <input onChange={(e)=>setFormData({...formData,name:e.target.value})} type="text" placeholder="Name" />
-              <input onChange={(e)=>setFormData({...formData,email:e.target.value})} type="text" placeholder="Email" />
-              <input onChange={(e)=>setFormData({...formData,phone:e.target.value})} type="text" placeholder="Phone No" />
-              {/* <select name="" id="">
-                <option value="">Select</option>
-                <option value=""></option>
-                <option value=""></option>
-              </select> */}
-              <input  onChange={(e)=>setFormData({...formData,appointmentDate:e.target.value})} type="date" />
-              <button className="btn form__btn"  onClick={handleBook}>Book Appointment</button>
-            </form>
-          </div>
+
+        <ul className="nav__links">
+  <li className="link">
+    <Link to="/">Home</Link>
+  </li>
+  {/* <li className="link ">
+  <NavDropdown title="Dropdown" id="basic-nav-dropdown">
+              <NavDropdown.Item href="#action/3.1">Action</NavDropdown.Item>
+              <NavDropdown.Item href="#action/3.2">
+                Another action
+              </NavDropdown.Item>
+              <NavDropdown.Item href="#action/3.3">Something</NavDropdown.Item>
+              <NavDropdown.Divider />
+              <NavDropdown.Item href="#action/3.4">
+                Separated link
+              </NavDropdown.Item>
+            </NavDropdown>
+  </li> */}
+  <li className="link">
+    <Link to="/">Treatment & Clinic</Link>
+  </li>
+  <li className="link">
+    <Link to="/">Wellness & Spa</Link>
+  </li>
+  <li className="link">
+    <Link to="/">Rehabilitation   </Link>
+  </li>   
+  <li className="link">
+    <Link to="/contact">Contact Us</Link>
+  </li>
+  <li className="link">
+    <Link to="/appointment">
+      <button className="btn">Login</button>
+    </Link>
+  </li>
+</ul>
+
+
+        <ul className="nav__links2">
+
+        <button className="sidebar-btn" onClick={handleShow}>
+        <FaBars />
+
+      </button>
+
+      <Offcanvas show={show} onHide={handleClose} placement="end">
+        <div className="text-end pe-3 ">
+                <button className="sidebar-btn" onClick={handleClose}>
+      <GrClose />
+
+      </button>
         </div>
-              <ToastContainer
-                position="bottom-right"
-                autoClose={2000}
-                hideProgressBar={false}
-                newestOnTop={false}
-                closeOnClick={false}
-                rtl={false}
-                pauseOnFocusLoss
-                draggable
-                pauseOnHover
-                theme="light"
-                transition={Bounce}
-                />
-      </header>
+
+      <ul className="nav nav-sidebar flex-column">
+  <li className="link ">
+    <Link className="nav-link" to="/">Home</Link>
+  </li>
+  <li className="link">
+    <Link className="nav-link" to="/">Treatments & Clinic</Link>
+  </li>
+  <li className="link">
+    <Link className="nav-link" to="/">Wellness & Spa</Link>
+  </li>
+  <li className="link">
+    <Link className="nav-link" to="/">Rehabilitation </Link>
+  </li>
+  <li className="link">
+    <Link className="nav-link" to="/contact">Contact Us</Link>
+  </li>
+  <li className="link">
+    <Link to="/appointment">
+      <button className="btn btn-primary mt-2">Login</button>
+    </Link>
+  </li>
+</ul>
+      </Offcanvas>
+        </ul>
+
+
+
+        
+      </nav>
+ 
+    </header>
   );
 };
 

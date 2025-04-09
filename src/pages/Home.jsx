@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { useState } from 'react'
 import '../styles/home.css'
 import { Typewriter } from 'react-simple-typewriter'
 import Underline from '../components/Underline'
@@ -6,13 +6,137 @@ import Founder from '../components/Founder'
 import Services from '../components/Services'
 import Counter from '../components/Counter'
 import Header from '../components/Header'
+import axios from "axios";
+
+import { Bounce, toast, ToastContainer } from "react-toastify";
+import Gallery from './Gallery'
+
+
 const Home = () => {
+    const [formData, setFormData] = useState({
+      name: "",
+      email: "",
+      phone: "",
+      department:'',
+      appointmentDate: "",
+    });
+  const handleBook = async (e) => {
+    e.preventDefault();
+    try {
+      let response = await axios.post(
+        "https://formsubmit.co/ajax/refadk007@gmail.com",
+        formData,
+        { "Content-Type": "application/json", Accept: "application/json" }
+      );
+      console.log(response);
+      if (response.status == 200) {
+        toast.success("Booked successfully");
+      }
+    } catch (error) {
+      console.log(error);
+    }
+  };
   return (
     <>
     <Header/>
+    
+
+ 
+      <div className="section__container header__container" id="home">
+        <div className="header__content">
+          <h1 className="headding">
+          Welcome to  Prashanthi Ayurveda
+          </h1>
+          <p>
+          <Typewriter 
+                  words={[
+                  'Ayurvedic Rahabilitation and wellness',
+                  'Fell the Best of Ayuvedic Healness',
+                  'Authentic, Pure and Herbal Ayurvedic Solutions',
+                  // 'Best Health Services'
+                  ]}
+                  loop={0}
+                  cursor
+                  cursorStyle='|'
+                  typeSpeed={90}
+                  deleteSpeed={50}
+                  delaySpeed={1400}
+                />
+          </p>
+          {/* <button className="btn">See Services</button> */}
+        </div>
+        <div className="header__form">
+          <form>
+            <h4 className="form-headding">Book Now</h4>
+            <input
+              onChange={(e) =>
+                setFormData({ ...formData, name: e.target.value })
+              }
+              type="text"
+              placeholder="Name"
+            />
+            <input
+              onChange={(e) =>
+                setFormData({ ...formData, email: e.target.value })
+              }
+              type="text"
+              placeholder="Email"
+            />
+            <input
+              onChange={(e) =>
+                setFormData({ ...formData, phone: e.target.value })
+              }
+              type="text"
+              placeholder="Phone No"
+            />
+            {/* <select name="" id="">
+                <option value="">Select</option>
+                <option value=""></option>
+                <option value=""></option>
+              </select> */}
+            <input
+              onChange={(e) =>
+                setFormData({ ...formData, appointmentDate: e.target.value })
+              }
+              type="date"
+            />
+<select
+  name="department"
+  onChange={(e) =>
+    setFormData({ ...formData, department: e.target.value })
+  }
+>
+  <option value="Ortho">Ortho</option>
+  <option value="Dental">Dental</option>
+  <option value="Neuro">Neuro</option>
+  <option value="Other">Other</option>
+</select>
+            <button className="btn form__btn" onClick={handleBook}>
+              Book Appointment
+            </button>
+          </form>
+        </div>
+      </div>
+      <ToastContainer
+        position="bottom-right"
+        autoClose={2000}
+        hideProgressBar={false}
+        newestOnTop={false}
+        closeOnClick={false}
+        rtl={false}
+        pauseOnFocusLoss
+        draggable
+        pauseOnHover
+        theme="light"
+        transition={Bounce}
+      />
+
+
+
+
+
     <div className='container-fluid home-container'>
-      <div className="row hero-row ">
-        {/* left */}
+      {/* <div className="row hero-row ">
         <div className="col-lg-6 col-sm-12   left-div " >
         <h1 className='title'>
             <span style={{ color: '#003152' }}>We Provide&nbsp;</span>
@@ -42,15 +166,18 @@ const Home = () => {
           <button className='appointment-btn btn shadow '>Appointment Now</button>
         </div>
 
-        {/* right */}
         <div className="col-lg-6 col-sm-12  right-div">
          
         </div>
-      </div>
-
-      <Counter/>
-     <Services/>
+      </div> */}
      <Founder/>
+
+      <Underline/>
+      <Counter/>
+      <Underline/>
+
+     <Services/>
+     <Gallery/>
 
     </div>
     </>

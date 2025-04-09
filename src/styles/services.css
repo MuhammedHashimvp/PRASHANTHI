@@ -1,16 +1,21 @@
 .hero-section{
-      background-image: linear-gradient(
+      /* background-image: linear-gradient(
       to right,
       rgba(142, 180, 164, 0.9),
       rgba(18, 172, 123, 0.701)
     ),
-      url("../assets/pra.jpg");
+      url("../assets/pra.jpg"); */
     background-position: center center;
     background-size: cover;
     background-repeat: no-repeat;
     background-size: cover;
-    height: 60vh;
     border-radius: 10px;
+  }
+  .hero-section h1{
+    color: #278c62;
+  }
+  .hero-section p{
+    color: #278c62;
   }
   .service-text{
     overflow-y: hidden;
@@ -40,4 +45,10 @@
   }
 .fs{
     color: var(--secondary-color);
+}
+
+.aminities img{
+  display: block;
+  height: 200px;
+  width: 200px;
 }

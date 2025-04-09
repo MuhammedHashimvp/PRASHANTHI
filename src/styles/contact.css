@@ -1,6 +1,5 @@
 .contact-bg{
     margin-top: 5rem;
-    height: 40vh;
     background-color: var(--background-color);
     text-align: center;
     display: flex;
@@ -37,6 +36,17 @@
 /* .contact-info text{
     padding-top: 8.4rem;
 } */
+.howtoreachdiv{
+    display: flex;
+    flex-direction: column;
+}
+.howtoreachdiv ul li{
+    padding: 6px;
+}
+.howtoreachdiv ul li h4{
+    overflow: hidden;
+}
+
 
 @media  screen and (min-width:760px){
     .contact-bg text{
@@ -48,6 +58,17 @@
         display: grid;
         grid-template-columns: repeat(2,1fr);
     }
+    .howtoreach{
+        display: flex;
+        width: 100%;
+    }
+    .map{
+        width: 70%;
+    }
+    .howtoreachdiv{
+        width: 30%;
+    }
+
 }
 @media screen and (min-width:992px) {
     .contact-bg .text{
@@ -61,3 +82,4 @@
     }
 
 }
+

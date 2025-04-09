@@ -9,6 +9,8 @@ import 'aos/dist/aos.css'
 import AOS from 'aos'
 import Book from './pages/Book'
 import { ToastContainer } from 'react-toastify';
+import Gallery from './pages/Gallery'
+
 
 function App() {
   // AOS.init()
@@ -20,6 +22,7 @@ function App() {
       <Route path='/' element={<Home/>}/>
       <Route path='/contact' element={<Contact/>}/>
       <Route path='/appointment' element={<Book/>}/>
+      <Route path='/gallery' element={<Gallery/>}/>
     </Routes>
 
 

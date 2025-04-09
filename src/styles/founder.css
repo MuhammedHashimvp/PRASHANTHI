@@ -1,25 +1,30 @@
 .founder-row{
     border-radius: 10px;
 }
-.founder-row h1{
-    text-align: center;
+.founder-row h3{
     color: var(--secondary-color);
-    font-size: var(--font-size-title);
-    font-weight: bold;
-    margin-top: 2rem;
 }
-.founder-row h2{
-    font-size: var(--font-size-sub-title);
+.founder-row  p{
+    color: #666;
+}
+.founder-row  h5{
+    color: #666;
+}
+.founder-row  h1{
+    color: #278c62;
 }
 .image-container{
     display: flex;
-    justify-content: center;
+    justify-content: start;
     background-image: url(../assets/founder-background.png);
-    background-position: center;
+    background-position: start;
     width: 30rem;
     border-radius: 1rem;
     /* box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px; */
 }
 .founder-img{
     width: 100%;
+}
+p{
+    text-align: start;
 }

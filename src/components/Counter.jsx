@@ -65,7 +65,7 @@ const MultiCountUp = () => {
           <div key={i} className="col-md-3 col-sm-6 mb-4">
             <div className="count-card p-4  rounded h-100">
               <h3 className="count-value">{counts[i]}+</h3>
-              <p className="count-title fw-bold">{stat.title}</p>
+              <p className="count-title text-center fw-bold">{stat.title}</p>
             </div>
           </div>
         ))}

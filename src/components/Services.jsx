@@ -8,6 +8,8 @@ import { FaHotel } from "react-icons/fa6";
 import { FaClinicMedical } from "react-icons/fa";
 import { FaEarthAmericas } from "react-icons/fa6";
 import { FaPersonWalkingLuggage } from "react-icons/fa6";
+import pra from "../assets/pra.jpg"
+import Underline from './Underline';
 
 
 
@@ -51,11 +53,12 @@ const services = [
 const TrendingServicePage = () => {
   return (
     <div className="service-page mt-5" id='service-section'>
-      {/* Hero Section */}
+
       <div className="hero-section text-center text-white d-flex flex-column justify-content-center align-items-center" >
-        <h1 className=" display-4 fw-bold remove-overflow">Specialized Services</h1>
+        <h1 className="  remove-overflow">Aminities</h1>
         <p className="lead">Ayurveda is the science of life, the art of living in harmony with nature.</p>
       </div>
+ 
 
       <Container className="my-5">
   <Row className="g-4">
@@ -78,6 +81,7 @@ const TrendingServicePage = () => {
     })}
   </Row>
 </Container>
+
 
       
     </div>

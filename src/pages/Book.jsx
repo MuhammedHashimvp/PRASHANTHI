@@ -2,8 +2,8 @@ import React, { useState } from 'react'
 import '../styles/book.css'
 import axios from 'axios'
 import { Bounce, toast,ToastContainer } from 'react-toastify'
-import logo from "../assets/logo.png"; 
-import { Link } from 'react-router-dom';
+
+
 
 const Book = () => {
 
@@ -34,26 +34,6 @@ const Book = () => {
 
   return (
     <>
-        {/* navbar */}
-        <header>
-        <nav className="section__container nav__container">
-                   <Link to={'/'}>
-                       <div className="nav__logo"><img src={logo} alt="" /></div>
-                       </Link>
-          <ul className="nav__links">
-            <Link to={'/'}><li className="link"><a href="#home">Home</a></li></Link>
-            <li className="link"><a href="#service-section">Services</a></li>
-           <Link to={'/appointment'}><li className="link"><a href="#pages">Book Appointment</a></li></Link>
-          </ul>
-          <Link to={'/contact'}>
-          <button className="btn">Contact Us</button>
-          </Link>
-        </nav>
-
-
-      </header>
-    {/* navbar end */}
-
     <div className='container-fluid book-container'>
     
     <div className="book-bg">
@@ -64,7 +44,7 @@ const Book = () => {
           <div></div>
         </div>
         <p className="text">
-          Lorem ipsum ard dolor sit amet consectetur adipisicing elit. Qui neque nostrum incidunt, obcaecati nam facilis eos ipsam eligendi facere voluptas enim, quos atque voluptatem magni? Laborum, dicta ratione? Earum, ea!
+          Lorem ipsum dolor sit amet consectetur adipisicing elit. Qui neque nostrum incidunt, obcaecati nam facilis eos ipsam eligendi facere voluptas enim, quos atque voluptatem magni? Laborum, dicta ratione? Earum, ea!
         </p>
         </div>
 

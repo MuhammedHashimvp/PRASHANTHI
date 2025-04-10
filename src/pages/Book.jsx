@@ -4,7 +4,6 @@ import axios from 'axios'
 import { Bounce, toast,ToastContainer } from 'react-toastify'
 import logo from "../assets/logo.png"; 
 import { Link } from 'react-router-dom';
-import Navbar from '../components/Header';
 
 
 const Book = () => {
@@ -36,7 +35,25 @@ const Book = () => {
 
   return (
     <>
-      <Navbar/>
+        {/* navbar */}
+        <header>
+        <nav className="section__container nav__container">
+                   <Link to={'/'}>
+                       <div className="nav__logo"><img src={logo} alt="" /></div>
+                       </Link>
+          <ul className="nav__links">
+            <Link to={'/'}><li className="link"><a href="#home">Home</a></li></Link>
+            <li className="link"><a href="#service-section">Services</a></li>
+           <Link to={'/appointment'}><li className="link"><a href="#pages">Book Appointment</a></li></Link>
+          </ul>
+          <Link to={'/contact'}>
+          <button className="btn">Contact Us</button>
+          </Link>
+        </nav>
+
+
+      </header>
+    {/* navbar end */}
 
     <div className='container-fluid book-container'>
     

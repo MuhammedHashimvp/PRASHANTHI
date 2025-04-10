@@ -6,9 +6,10 @@ import {
   FaFacebookF,
   FaInstagram,
   FaWhatsapp,
-  FaTwitter,
+  FaYoutube,
 } from "react-icons/fa";
 import { Link } from "react-router-dom";
+
 
 const Footer = () => {
   return (
@@ -94,12 +95,12 @@ const Footer = () => {
                 <FaWhatsapp />
               </a>
               <a
-                href=""
+                href="https://www.youtube.com/channel/UCsmejs7Dnm009lJ3039J16Q"
                 target="_blank"
                 rel="noreferrer"
                 className="social-icon"
               >
-                <FaTwitter />
+                <FaYoutube/>
               </a>
             </Col>
           </Row>

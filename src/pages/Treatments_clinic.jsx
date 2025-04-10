@@ -16,7 +16,6 @@ function Treatments_clinic() {
   ]
   return (
     <>
-      <Navbar/>
       <div>
         <h4 className='headline'>Our Treatments</h4>
         <div className="treatments">

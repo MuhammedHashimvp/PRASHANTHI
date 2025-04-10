@@ -2,14 +2,10 @@ import React, { useState } from "react";
 import "../styles/header.css";
 import logo from "../assets/logo-footer.png";
 import { Link } from "react-router-dom";
-import { Bounce, toast, ToastContainer } from "react-toastify";
-import axios from "axios";
 import { FaBars } from "react-icons/fa";
 import { GrClose } from "react-icons/gr";
-import Button from 'react-bootstrap/Button';
 import Offcanvas from 'react-bootstrap/Offcanvas';
-import Dropdown from 'react-bootstrap/Dropdown';
-import DropdownButton from 'react-bootstrap/DropdownButton';
+
 
 import NavDropdown from 'react-bootstrap/NavDropdown';
 const Navbar = () => {
@@ -36,27 +32,24 @@ const Navbar = () => {
   <li className="link">
     <Link to="/">Home</Link>
   </li>
-  {/* <li className="link ">
-  <NavDropdown title="Dropdown" id="basic-nav-dropdown">
-              <NavDropdown.Item href="#action/3.1">Action</NavDropdown.Item>
-              <NavDropdown.Item href="#action/3.2">
-                Another action
-              </NavDropdown.Item>
-              <NavDropdown.Item href="#action/3.3">Something</NavDropdown.Item>
-              <NavDropdown.Divider />
-              <NavDropdown.Item href="#action/3.4">
-                Separated link
-              </NavDropdown.Item>
-            </NavDropdown>
-  </li> */}
-  <li className="link">
-    <Link to="/">Treatment & Clinic</Link>
+  <li className="link ">
+  <NavDropdown title="Services" id="basic-nav-dropdown">
+  <NavDropdown.Item as={Link} to="/treatments-clinic">
+    Treatment & Clinic
+  </NavDropdown.Item>
+  <NavDropdown.Item as={Link} to="/wellness-spa">
+    Wellness & Spa
+  </NavDropdown.Item>
+  <NavDropdown.Item as={Link} to="/rehabilitation">
+    Rehabilitation
+  </NavDropdown.Item>
+</NavDropdown>
   </li>
   <li className="link">
-    <Link to="/">Wellness & Spa</Link>
+    <Link to="/">Mediflora</Link>
   </li>
   <li className="link">
-    <Link to="/">Rehabilitation   </Link>
+    <Link to="/">About Us</Link>
   </li>   
   <li className="link">
     <Link to="/contact">Contact Us</Link>

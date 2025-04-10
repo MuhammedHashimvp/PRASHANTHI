@@ -10,6 +10,7 @@ import AOS from 'aos'
 import Book from './pages/Book'
 import { ToastContainer } from 'react-toastify';
 import Gallery from './pages/Gallery'
+import Treatments_clinic from './pages/Treatments_clinic'
 
 
 function App() {
@@ -17,12 +18,14 @@ function App() {
   return (
     <>
 
+
     
     <Routes>
       <Route path='/' element={<Home/>}/>
       <Route path='/contact' element={<Contact/>}/>
       <Route path='/appointment' element={<Book/>}/>
       <Route path='/gallery' element={<Gallery/>}/>
+      <Route path='/treatments-clinic' element={<Treatments_clinic/>}/>
     </Routes>
 
 

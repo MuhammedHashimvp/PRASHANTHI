@@ -8,8 +8,6 @@ import { FaHotel } from "react-icons/fa6";
 import { FaClinicMedical } from "react-icons/fa";
 import { FaEarthAmericas } from "react-icons/fa6";
 import { FaPersonWalkingLuggage } from "react-icons/fa6";
-import pra from "../assets/pra.jpg"
-import Underline from './Underline';
 
 
 
@@ -30,7 +28,7 @@ const services = [
     ,
   },
   {
-    title: 'Medical Tourism In Dentistry, Surgery And All Other Medical Departments',
+    title: 'Medical Tourism in Dentistry, Surgery & Other Specialties',
     // description: 'Stand out with a strong logo, voice, and visual identity.',
     icon: <FaClinicMedical className='fs'/>
     ,
@@ -59,18 +57,18 @@ const TrendingServicePage = () => {
         <p className="lead">Ayurveda is the science of life, the art of living in harmony with nature.</p>
       </div>
  
-
+{/* 
       <Container className="my-5">
   <Row className="g-4">
     {services.map((service, idx) => {
-      const isLastOdd = services.length % 4 !== 0 && idx === services.length - 1;
+      // const isLastOdd = services.length % 4 !== 0 && idx === services.length - 1;
 
       return (
         <Col
           md={6}
           lg={3}
           key={idx}
-          className={isLastOdd ? 'mx-auto' : ''}
+          // className={isLastOdd ? 'mx-auto' : ''}
         >
           <Card className="glass-card text-center p-3 h-100 " >
             <div className="icon fs-1 mb-3">{service.icon}</div>
@@ -80,8 +78,19 @@ const TrendingServicePage = () => {
       );
     })}
   </Row>
+</Container> */}
+<Container className="d-flex justify-content-center gap-3 flex-wrap service-row">
+  {
+    services.map((i, j) => (
+      <Card key={j} className="text-center p-3 service-card">
+        <div className='fs-1'>{i.icon}</div>
+        <Card.Title className="service-text mt-2">{i.title}</Card.Title>
+      </Card>
+    ))
+  }
 </Container>
 
+    
 
       
     </div>

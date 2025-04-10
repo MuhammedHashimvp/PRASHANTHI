@@ -225,14 +225,6 @@ header {
 }
 
 
-.dropdown{
-  overflow-y: visible;
-  overflow-y: visible;
-}
-.dropdown-menu{
-  z-index: 1000000 !important;
-  position: absolute !important;
-}
-.show{
-  
+.link{
+  overflow: visible;
 }

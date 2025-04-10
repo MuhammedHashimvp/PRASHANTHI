@@ -1,12 +1,8 @@
 import React from "react";
-import logo from "../assets/logo.png";
 import "../styles/contact.css";
 import { FaMobileAlt } from "react-icons/fa";
 import { MdEmail, MdAccessTimeFilled } from "react-icons/md";
 import { FaLocationDot } from "react-icons/fa6";
-import { Link } from "react-router-dom";
-import Dropdown from "react-bootstrap/Dropdown";
-import Navbar from "../components/Header";
 import { FaPlaneArrival } from "react-icons/fa6";
 import { FaTrainSubway } from "react-icons/fa6";
 import { FaCity } from "react-icons/fa";
@@ -16,7 +12,7 @@ import { FaCity } from "react-icons/fa";
 const Contact = () => {
   return (
     <>
-      <Navbar />
+      
       <section className="contact-section">
         <div className="contact-bg">
           <h3 className="remove-overflow">Contact Us</h3>

@@ -5,7 +5,6 @@ import Underline from '../components/Underline'
 import Founder from '../components/Founder'
 import Services from '../components/Services'
 import Counter from '../components/Counter'
-import Header from '../components/Header'
 import axios from "axios";
 
 import { Bounce, toast, ToastContainer } from "react-toastify";
@@ -50,9 +49,6 @@ const Home = () => {
   };
   return (
     <>
-    <Header/>
-    
-
  
       <div className="section__container header__container" id="home">
         <div className="header__content">

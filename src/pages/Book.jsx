@@ -4,7 +4,6 @@ import axios from 'axios'
 import { Bounce, toast,ToastContainer } from 'react-toastify'
 
 
-
 const Book = () => {
 
   const [formData,setFormData]=useState({
@@ -44,7 +43,7 @@ const Book = () => {
           <div></div>
         </div>
         <p className="text">
-          Lorem ipsum dolor sit amet consectetur adipisicing elit. Qui neque nostrum incidunt, obcaecati nam facilis eos ipsam eligendi facere voluptas enim, quos atque voluptatem magni? Laborum, dicta ratione? Earum, ea!
+          Lorem ipsum ard dolor sit amet consectetur adipisicing elit. Qui neque nostrum incidunt, obcaecati nam facilis eos ipsam eligendi facere voluptas enim, quos atque voluptatem magni? Laborum, dicta ratione? Earum, ea!
         </p>
         </div>
 

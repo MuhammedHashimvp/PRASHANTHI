@@ -46,7 +46,7 @@ const Navbar = () => {
 </NavDropdown>
   </li>
   <li className="link">
-    <Link to="/">Mediflora</Link>
+    <Link to="/mediflora">Mediflora</Link>
   </li>
   <li className="link">
     <Link to="/">About Us</Link>
